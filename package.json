@@ -1,0 +1,22 @@
+{
+  "name": "simkpfk",
+  "version": "0.1.0",
+  "description": "Sistem Informasi Manajemen Klinik Pratama Fitrah Keluarga",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naufalahmadfauz/SIMKPFK.git"
+  },
+  "keywords": [
+    "SIMKPFK"
+  ],
+  "author": "Naufal",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/naufalahmadfauz/SIMKPFK/issues"
+  },
+  "homepage": "https://github.com/naufalahmadfauz/SIMKPFK#readme"
+}
