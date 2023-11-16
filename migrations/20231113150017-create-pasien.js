@@ -24,6 +24,18 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull:false
       },
+      tinggi_badan:{
+        type: Sequelize.INTEGER,
+        allowNull:false
+      },
+      berat_badan:{
+        type: Sequelize.INTEGER,
+        allowNull:false
+      },
+      usia:{
+        type: Sequelize.INTEGER,
+        allowNull:false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
