@@ -17,32 +17,16 @@ const storageFolder = async () => {
         })
     }
 }
-//this function makes configuration for storing file. this utilize diskstore so it will store the file in disk.
-const uploadCoverStorage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'storage/covers')
-    },
-    filename: function (req, file, cb) {
-        const extfilename = path.extname(file.originalname)
-        cb(null, file.fieldname + '_' + Date.now() + '_' + randomString.generate({length: 5}) + extfilename)
-    }
-})
-
-const uploadAvatarStorage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'storage/avatar')
-    },
-    filename: function (req, file, cb) {
-        const extfilename = path.extname(file.originalname)
-        cb(null, file.fieldname + '_' + Date.now() + '_' + randomString.generate({length: 5}) + extfilename)
-    }
-})
-
-
-//this funcion set uploadCover with configured storage
-const uploadCover = multer({
-    storage: uploadCoverStorage,
-
+const pictureUpload = multer({
+    storage: multer.diskStorage({
+        destination: function (req, file, cb) {
+            cb(null, 'storage/picture')
+        },
+        filename: function (req, file, cb) {
+            const extfilename = path.extname(file.originalname)
+            cb(null, 'KTP'+ '_' + randomString.generate({length: 6}) + extfilename)
+        }
+    }),
     limits: {
         fileSize: 10000000
     },
@@ -54,30 +38,4 @@ const uploadCover = multer({
     }
 })
 
-const avatarUpload = multer({
-    storage: uploadAvatarStorage,
-
-    limits: {
-        fileSize: 5000000
-    },
-    fileFilter(req, file, cb) {
-        if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
-            return cb(new Error('File Must an image'))
-        }
-        cb(null, true)
-    }
-})
-
-module.exports = {storageFolder, uploadCover,uploadCoverStorage,avatarUpload}
-//this function configure for single upload,it doesn't use storage setting because it the function that use this function store the picture into mongodb as buffer '
-// const upload = multer({
-//     limits: {
-//         fileSize: 1000000
-//     },
-//     fileFilter(req, file, cb) {
-//         if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
-//             return cb(new Error('File Must an image'))
-//         }
-//         cb(undefined, true)
-//     }
-// })
+module.exports = {pictureUpload}

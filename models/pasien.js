@@ -33,10 +33,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       validate: {
         notEmpty: {
-          msg: "nama harus diisi"
+          msg: "Nama harus diisi"
         },
         notNull: {
-          msg: "nama tidak boleh kosong"
+          msg: "Nama tidak boleh kosong"
         }
       }
     },
@@ -45,10 +45,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       validate: {
         notEmpty: {
-          msg: "jkn harus diisi"
+          msg: "JKN harus diisi"
         },
         notNull: {
-          msg: "jkn tidak boleh kosong"
+          msg: "JKN tidak boleh kosong"
         }
       }
     },
@@ -57,10 +57,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       validate: {
         notEmpty: {
-          msg: "alamat harus diisi"
+          msg: "Alamat harus diisi"
         },
         notNull: {
-          msg: "alamat tidak boleh kosong"
+          msg: "Alamat tidak boleh kosong"
         }
       }
     },
@@ -69,10 +69,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       validate: {
         notEmpty: {
-          msg: "status harus diisi"
+          msg: "Status harus diisi"
         },
         notNull: {
-          msg: "status tidak boleh kosong"
+          msg: "Status tidak boleh kosong"
         }
       }
     },
@@ -108,12 +108,13 @@ module.exports = (sequelize, DataTypes) => {
           msg: "Usia harus diisi"
         },
         notNull: {
-          msg: "Usia badan tidak boleh kosong"
+          msg: "Usia tidak boleh kosong"
         }
       }
     },
-    
-    
+    ktp: {
+      type: DataTypes.STRING,
+    },
   }, {
     sequelize,
     tableName: 'pasiens',

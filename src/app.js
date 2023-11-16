@@ -5,16 +5,18 @@ const homeRouter = require('./routers/home')
 
 
 // const hbs = require('hbs')
-// const path = require("path");
+const path = require("path");
 //
 // const viewsPath = path.join(__dirname, '../templates/views')
 // const vartialsPath = path.join(__dirname, '../templates/partials')
 // const publicDirectoryPath = path.join(__dirname, '../public')
+const pictureDirectoryPath = path.join(__dirname, '../storage/picture')
 
 const app = express()
 
 
 // app.use(express.static(publicDirectoryPath))
+app.use(express.static(pictureDirectoryPath))
 
 // app.set('views', viewsPath)
 // app.set('view engine', 'hbs')
