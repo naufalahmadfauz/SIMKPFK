@@ -316,8 +316,8 @@ module.exports = {
             createdAt: "2023-11-14T12:01:44.000Z",
             updatedAt: "2023-11-14T12:01:45.00z"
         }
-  
-        ]);
+        
+    ]);
     /**
      * Add seed commands here.
      *
