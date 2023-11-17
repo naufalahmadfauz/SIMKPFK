@@ -1,4 +1,4 @@
-const app = require('./app')
+const app = require('./src/app')
 const port = process.env.PORT
 app.listen(port,()=>{
     console.log('Server is up and running on port ',port)
