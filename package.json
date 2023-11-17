@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "env-cmd -f ./envfile/dev.env nodemon -e js,hbs,mjs,json src/index.js"
+    "dev": "env-cmd -f ./envfile/dev.env nodemon -e js,hbs,mjs,json src/index.js",
+    "migratesql": "sequelize db:migrate --env production",
+    "seedsql": "sequelize db:seed:all --env production"
   },
   "repository": {
     "type": "git",
