@@ -1,4 +1,4 @@
 .idea
 node_modules
 envfile
-config
+config/config.json
