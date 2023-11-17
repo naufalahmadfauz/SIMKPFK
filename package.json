@@ -6,9 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "env-cmd -f ./envfile/dev.env nodemon -e js,hbs,mjs,json src/index.js",
-    "migratesql": "sequelize db:migrate --config ./config/prod_config.json --env production",
-    "dropsql": "sequelize db:drop --config ./config/prod_config.json --env production",
-    "seedsql": "sequelize db:seed:all --config ./config/prod_config.json --env production",
     "start": "node src/index.js"
   },
   "repository": {
